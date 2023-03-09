@@ -13,6 +13,7 @@ border-radius: 50%;
     padding-top: 10px;
 }
 h1{
+    color: rgb(24, 112, 179);
     margin-left: 20px;
 }
 h2{
@@ -20,10 +21,15 @@ h2{
     color: red;
 }
 h3{
+    
     margin-top: 2px;
 }
 hr{
     border-top: 10px dotted rgb(146, 220, 241);
     width: 30%;
   
+}
+td{
+    font-style: oblique;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
