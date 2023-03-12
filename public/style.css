@@ -1,7 +1,9 @@
 body{
-    background-color: azure;
+    background-color: #374141;
+    text-align: center;
 }
 #pp{
+    margin-top: 4rem;
 height: 180px;    
 outline: auto;
 border-radius: 50%;
@@ -13,16 +15,16 @@ border-radius: 50%;
     padding-top: 10px;
 }
 h1{
-    color: rgb(24, 112, 179);
-    margin-left: 20px;
+    color:#66BFBF;
 }
 h2{
     margin-top: 2px;
-    color: red;
+    color: #66BFBF;
 }
 h3{
     
     margin-top: 2px;
+    color: #66BFBF;
 }
 hr{
     border-top: 10px dotted rgb(146, 220, 241);
@@ -39,3 +41,43 @@ tr{
     align-content: center;
     margin-left: 30px;
 }
+.cloud1{
+
+
+    height: 10rem;
+    position:absolute;
+    display: flex;
+    margin-top:200px;
+
+    
+}
+.cloud2{
+    height: auto;
+    width: 12rem;
+    position: absolute;
+    margin: 10px auto auto 15px;
+    padding-bottom: 3rem;
+}
+.name{
+    font-style: oblique;
+    font-family: Dancing script;
+    font-size:3em ;
+    text-align: center;
+    animation: alternate-reverse;
+    
+}
+.description{
+    margin-top: -10px;
+    text-align: center;
+    border-color: black;
+}
+
+
+
+
+
+
+
+
+
+
