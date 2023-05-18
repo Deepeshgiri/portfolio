@@ -1,83 +1,8 @@
 body{
-    background-color: #374141;
     text-align: center;
+    background-color: rgb(28, 207, 207);
 }
 #pp{
-    margin-top: 4rem;
-height: 180px;    
-outline: auto;
-border-radius: 50%;
-
+    height: 170px;
+    border-radius: 50%;
 }
-
-#cc{
-    padding-left: 10px;
-    padding-top: 10px;
-}
-h1{
-    color:#66BFBF;
-}
-h2{
-    margin-top: 2px;
-    color: #66BFBF;
-}
-h3{
-    
-    margin-top: 2px;
-    color: #66BFBF;
-}
-hr{
-    border-top: 10px dotted rgb(146, 220, 241);
-    width: 30%;
-  
-}
-td{
-    display: inline;
-    margin-left: 80px;
-    font-style: oblique;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-tr{
-    align-content: center;
-    margin-left: 30px;
-}
-.cloud1{
-
-
-    height: 10rem;
-    position:absolute;
-    display: flex;
-    margin-top:200px;
-
-    
-}
-.cloud2{
-    height: auto;
-    width: 12rem;
-    position: absolute;
-    margin: 10px auto auto 15px;
-    padding-bottom: 3rem;
-}
-.name{
-    font-style: oblique;
-    font-family: Dancing script;
-    font-size:3em ;
-    text-align: center;
-    animation: alternate-reverse;
-    
-}
-.description{
-    margin-top: -10px;
-    text-align: center;
-    border-color: black;
-}
-
-
-
-
-
-
-
-
-
-
