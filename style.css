@@ -1,0 +1,25 @@
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#road-container {
+    position: relative;
+    width: 80vw;
+    height: 10px;
+    background-color: #ddd;
+}
+
+.checkpoint {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+}
