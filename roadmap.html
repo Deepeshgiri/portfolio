@@ -1,4 +1,5 @@
 <html>
+	<script src="https://unpkg.com/xmldom@0.6.0/dist/dom-parser.js"></script>
 <script src=
 "https://d3js.org/d3.v4.min.js"></script>
 <script src=
@@ -39,12 +40,17 @@
 
     
 	<div class="col-xs-12 text-center ">
-		<h2>Donut Chart</h2>
+		<h2>Proficiency</h2>
 	</div>
 
 	<div  id="donut-chart"></div>
 
 
+</div>
+
+
+<div>
+	<h2>git hub work</h2>
 </div>
 
 	<script>
@@ -71,6 +77,63 @@
 			},
 			bindto: "#donut-chart",
 		});
+	</script>
+		
+	<script>
+
+		// Replace 'https://example.com' with the URL you want to fetch
+const url = 'https://github.com/Deepeshgiri';
+// const proxyUrl = `https://cors-anywhere.herokuapp.com/${url}`;
+
+// // Using the fetch API
+// fetch(proxyUrl)
+//   .then(response => {
+//     // Check if the request was successful (status code 200-299)
+//     if (!response.ok) {
+//       throw new Error(`Network response was not ok, status code: ${response.status}`);
+//     }
+    
+//     // Parse the response body as JSON (or use text(), blob(), arrayBuffer(), etc. based on your needs)
+//     return response.json();
+//   })
+//   .then(data => {
+//     // Handle the data from the response
+//     console.log('Data from the server:', data);
+//   })
+//   .catch(error => {
+//     // Handle errors during the fetch
+//     console.error('Error during fetch:', error);
+//   });
+const parser = new DOMParser();
+
+fetch(url)
+    .then(response => {
+      // Check if the request was successful (status code 200-299)
+      if (!response.ok) {
+        throw new Error(`Network response was not ok, status code: ${response.status}`);
+      }
+
+      // Return the HTML content as text
+      return response.text();
+    })
+    .then(html => {
+      // Use DOMParser to parse the HTML string
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+
+      // Extract data from the parsed HTML
+      const titleElement = doc.querySelector('title');
+      const pageTitle = titleElement ? titleElement.textContent : 'No title found';
+
+      // Display the extracted data
+      console.log('Page Title:', pageTitle);
+    })
+    .catch(error => {
+      // Handle errors during the fetch
+      console.error('Error during fetch:', error);
+    });
+		
+
 	</script>
 </body>
 </html>
