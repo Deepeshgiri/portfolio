@@ -8,13 +8,12 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    
     <div style="border: 5px solid brown;padding: 10px;margin-bottom: 10px;">
         <canvas id="myChartX" width="400" height="400"></canvas>
     </div>
-    <div style="border: 5px solid black;">
-        <canvas id="myChartY" width="400" height="400"></canvas>
-    </div>
-  
+   
+ 
   
 
   <script>
@@ -32,21 +31,30 @@
     // Plotting the data
     async function plotDataX() {
       const { xjson, yjson } = await fetchData();
-      
-      const xData = xjson.map((id)=>id.RandomNumber);
-      const yData= yjson.map((id)=>id.RandomNumber)
-      const xDatalabel = xjson.map((id)=>id.Label)
+      const xData1 = [];
+        const yData1 = [];
+        
+        const xData = xData1.push(xjson.map((id)=>parseInt(id.RandomNumber)))
+        
+        const yData= yData1.push(yjson.map((id)=>parseInt(id.RandomNumber)))
+        console.log(xData1,yData1)
+      const xDatalab = xjson.map((id)=>id.Label);
+      const yDatalab= yjson.map((id)=>id.Label)
+    
+      const xDatalabel = xjson.map((id)=>id.id)
 
       const ctx = document.getElementById('myChartX').getContext('2d');
       const myChart = new Chart(ctx, {
-        type: 'line',
+        
+        type: 'scatter',
         data: {
-          labels: xDatalabel,
+          
           datasets: [{
-            label: 'Y Axis',
-            data: xData,
+            labels:xData1[0],
+            label: "x , y",
+            data: xData1[0].map((x, i) => ({ x, y: yData1[0][i] })),
             borderColor: 'rgb(75, 192, 192)',
-            tension: 0
+            tension: 0.1
           }]
         },
         options: {
@@ -67,46 +75,10 @@
         }
       });
     }
-    async function plotDataY() {
-      const { xjson, yjson } = await fetchData();
-      
-      const xData = xjson.map((id)=>id.RandomNumber);
-      const yData= yjson.map((id)=>id.RandomNumber)
-      const yDatalabel = yjson.map((id)=>id.Label)
-
-      const ctx = document.getElementById('myChartY').getContext('2d');
-      const myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: yDatalabel,
-          datasets: [{
-            label: 'Y Axis',
-            data: yData,
-            borderColor: 'rgb(90, 12, 192)',
-            tension: 0
-          }]
-        },
-        options: {
-          scales: {
-            x: {
-              title: {
-                display: true,
-                text: 'X Axis'
-              }
-            },
-            y: {
-              title: {
-                display: true,
-                text: 'Y Axis'
-              }
-            }
-          }
-        }
-      });
-    }
-
+  
     plotDataX();
-    plotDataY();
+   
+   
   </script>
 </body>
 </html>
