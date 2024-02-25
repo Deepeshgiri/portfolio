@@ -47,7 +47,9 @@ body {
   opacity: 1;
 }
 .home-section.active,
-.project-section.active , .about-section.active , .contact-section.active{
+.project-section.active,
+.about-section.active,
+.contact-section.active {
   position: relative;
   opacity: 1;
   z-index: 8;
@@ -61,7 +63,7 @@ body {
   position: fixed;
   top: 0;
   opacity: 0;
-  transition: 1s;
+  transition: 0.5s;
 }
 .heading {
   color: #fff;
@@ -77,7 +79,10 @@ body {
   height: 100vh;
   width: 50%;
   object-fit: cover;
-  opacity: 0.2;
+  opacity: 0.6;
+}
+.home-img:hover{
+  opacity: 1;
 }
 
 /* project section */
@@ -93,13 +98,13 @@ body {
 }
 
 .project-heading {
-  font-size: 80px;
-  background-color: #252525;
+  font-size: 60px;
+  background-color: #5a5757;
   text-transform: capitalize;
   text-align: center;
   margin-bottom: 50px;
 
-  color: #1c1c1c;
+  color: #ffffff;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-stroke: 8px transparent;
@@ -185,9 +190,9 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 150px 100px 0;
-  position: relative;
-  top: 0;
-  transition: 1s;
+  
+  transition: 0.5s;
+  position: fixed;
   opacity: 0;
 }
 
@@ -207,19 +212,27 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 5%;
-  opacity: 0.8;
+  opacity: 0.7;
   object-fit: cover;
+}
+.about-img:hover{
+  opacity: 1;
 }
 
 .about-info {
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.9;
   font-size: 20px;
   line-height: 25px;
   text-align: center;
 }
-
-.download-cv-btn{
+.str-heading {
+  opacity: 1 !important;
+  font-size: 30px;
+  font-style: oblique;
+  color: #fff !important;
+}
+.download-cv-btn {
   position: absolute;
   bottom: 20%;
   left: 50%;
@@ -229,24 +242,22 @@ body {
   border: none;
   font-size: 16px;
   transition: 0.5s;
-  background: rgba(0,0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   text-transform: capitalize;
-  
 }
-.download-cv-btn:hover{
+.download-cv-btn:hover {
   background: #fff;
 }
 
-
 /* skill section  */
 
-.skill-section{
+.skill-section {
   position: absolute;
   margin: 50px 0;
 }
 
-.heading-skill{
+.heading-skill {
   text-align: center;
   font-size: 60px;
   color: #fff;
@@ -255,72 +266,68 @@ body {
   margin-bottom: 50px;
 }
 
-.skill-container{
+.skill-container {
   width: auto;
-margin: auto;
-display: grid;
-grid-template-columns: repeat(4,0.65fr);
-gap: 10px;
-color: #fff;
-
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 0.65fr);
+  gap: 10px;
+  color: #fff;
 }
 
-.skill-card{
+.skill-card {
   position: relative;
-  
 }
 
-.skill-img{
+.skill-img {
   display: block;
   margin: auto;
   height: 200px;
   width: 150px;
   border-radius: 10%;
   opacity: 0.8;
-  
 }
-.skill-img:hover{
+.skill-img:hover {
   opacity: 1;
 }
 
-.skill-name{
-font-size: 30px;
-font-weight: 300;
-text-align: center;
-text-transform: capitalize;
-margin: 20px 0 10px;
+.skill-name {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 20px 0 10px;
 }
 
-.skill-info{
+.skill-info {
   text-align: center;
   opacity: 0.5;
   font-size: 18px;
-  
+
   line-height: 30px;
 }
 
-.skill-lvl{
-  position:absolute;
- top: 120px;
- right: 0;
+.skill-lvl {
+  position: absolute;
+  top: 120px;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
- height: 60px;
- width: 60px;
+  height: 60px;
+  width: 60px;
   font-size: 20px;
   color: #191919;
   border-radius: 50%;
   border: 5px solid;
 }
 
-.skill-card:nth-child(1) .skill-lvl{
+.skill-card:nth-child(1) .skill-lvl {
   background: #ff4f4f28;
   border-color: #ff4f4f;
 }
 
-
-.contact-section{
+.contact-section {
   background: #fff;
   opacity: 0;
 }
