@@ -47,7 +47,7 @@ body {
   opacity: 1;
 }
 .home-section.active,
-.project-section.active , .about-section.active{
+.project-section.active , .about-section.active , .contact-section.active{
   position: relative;
   opacity: 1;
   z-index: 8;
@@ -194,7 +194,7 @@ body {
 .about {
   width: 100%;
   display: grid;
-  grid-template-columns: 30% 65%;
+  grid-template-columns: 40% 60%;
   gap: 40px;
 }
 
@@ -208,13 +208,15 @@ body {
   object-fit: cover;
   border-radius: 5%;
   opacity: 0.8;
+  object-fit: cover;
 }
 
 .about-info {
   color: #fff;
-  opacity: 0.6;
+  opacity: 0.8;
   font-size: 20px;
   line-height: 25px;
+  text-align: center;
 }
 
 .download-cv-btn{
@@ -315,4 +317,10 @@ margin: 20px 0 10px;
 .skill-card:nth-child(1) .skill-lvl{
   background: #ff4f4f28;
   border-color: #ff4f4f;
+}
+
+
+.contact-section{
+  background: #fff;
+  opacity: 0;
 }
