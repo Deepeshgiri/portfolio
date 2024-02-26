@@ -189,7 +189,7 @@ body {
 .about-section {
   width: 100%;
   min-height: 100vh;
-  padding: 150px 100px 0;
+  padding: 100px 100px 0;
   
   transition: 0.5s;
   position: fixed;
@@ -199,8 +199,8 @@ body {
 .about {
   width: 100%;
   display: grid;
-  grid-template-columns: 40% 60%;
-  gap: 40px;
+  grid-template-columns: 40% 55%;
+  gap: 5%;
 }
 
 .about-img-cotainer {
@@ -208,12 +208,14 @@ body {
 }
 
 .about-img {
-  width: 100%;
+  width: 105%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5%;
+  border-radius: 3%;
+  
+  padding: 5% 0 5% 0;
   opacity: 0.7;
-  object-fit: cover;
+  
 }
 .about-img:hover{
   opacity: 1;
@@ -233,9 +235,9 @@ body {
   color: #fff !important;
 }
 .download-cv-btn {
-  position: absolute;
+  position: relative;
   bottom: 20%;
-  left: 50%;
+  left: 40%;
   color: #fff;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -247,13 +249,14 @@ body {
   text-transform: capitalize;
 }
 .download-cv-btn:hover {
-  background: #fff;
+  background: none;
+  
 }
 
 /* skill section  */
 
 .skill-section {
-  position: absolute;
+  position: relative;
   margin: 50px 0;
 }
 
@@ -310,24 +313,57 @@ body {
 .skill-lvl {
   position: absolute;
   top: 120px;
-  right: 0;
+  right: 60px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
-  width: 60px;
-  font-size: 20px;
-  color: #191919;
+  height: 80px;
+  width: 80px;
+  font-size: 25px;
+  color: black;
   border-radius: 50%;
-  border: 5px solid;
+  border: 7px solid;
 }
 
 .skill-card:nth-child(1) .skill-lvl {
-  background: #ff4f4f28;
+  background: #be7979;
   border-color: #ff4f4f;
+  color: rgb(234, 7, 7);
 }
 
-.contact-section {
-  background: #fff;
-  opacity: 0;
+.skill-card:nth-child(2) .skill-lvl{
+  border-color: rgb(12, 2, 61);
+  color: rgb(4, 2, 46);
+  background: #3829e7;
+}
+.skill-card:nth-child(3) .skill-lvl{
+  border-color: rgb(252, 248, 4);
+  color: rgb(249, 249, 245);
+  background: #9fa318e4;
+}
+.skill-card:nth-child(4) .skill-lvl{
+  border-color: rgb(7, 7, 7);
+  color: rgb(0, 255, 8);
+  background: #ece4e4;
+}
+.skill-card:nth-child(5) .skill-lvl{
+  border-color: rgb(5, 198, 208);
+  color: rgb(21, 209, 209);
+  background: #fbf9f9;
+}
+.skill-card:nth-child(6) .skill-lvl{
+  border-color: rgb(6, 174, 15);
+  color: rgb(11, 166, 45);
+  background: #f9f4f4;
+}
+
+.timeline{
+  display: block;
+  width: 80%;
+  margin: 150px auto;
+}
+
+.timeline .heading-exp{
+  margin-bottom: 150px;
 }
