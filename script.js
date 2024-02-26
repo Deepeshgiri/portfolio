@@ -15,6 +15,12 @@ links.forEach((link, i) => {
             }, 1000)
         }
     })
-})
+});
 
-console.log(links)
+var Typed = new Typed('.multi', {
+    strings:["Front-end" , "Back-end" , "Full-Stack"],
+    typeSpeed:80,
+    backSpeed:80,
+    backDelay:1000,
+    loop:true,
+});
