@@ -589,9 +589,9 @@ body {
 
 
 .home-section  .project-section .about-section .contact-section{
-  width: 90%;
+  width: 100%;
   height: 100vh;
-  display: inline-block;
+  display: block;
   align-items: center;
   position: fixed;  
 }
@@ -629,30 +629,91 @@ body {
 
 .project-heading{
    
-  display: none;
+  display: block;
 }
 
-.project-container{
-  display: flex;
-  flex-wrap: wrap;
+
+.project-heading {
+  font-size: 60px;
+  background-color: #5a5757;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 50px;
+
+  color: #ffffff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 8px transparent;
+}
+
+.project-container {
+  display: grid;
+grid-template-rows: repeat(4,1fr);
+  gap: 5%;
+  margin: 20px;
+}
+
+.project-card {
+  height: 100%;
  
-
- 
 }
 
-.project-content{
- width:80% ;
- height: 20%;
+.project-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: 0.5s;
 }
-.project-img{
-  width: 80%;
-  height: 20%;
-  float: left;
+
+.project-content {
+  position: relative;
+  padding: 40px;
+  color: #fff;
+  transition: 0.5s;
+  opacity: 0;
 }
-.project-title .project-info{
-  font-size: small;
-word-break: break-all;
+.project-title {
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
 }
+
+.project-info {
+  margin: 40px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.project-btn-grp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10%;
+  position: relative;
+  margin: 2%;
+}
+
+.project-btn {
+  height: 40px;
+  text-transform: capitalize;
+  font-size: 18px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-btn.live {
+  background: none;
+  border: 2px solid #fff;
+}
+
+
+
 
 }
 
