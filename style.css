@@ -566,7 +566,7 @@ body {
 
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 460px) {
   
 .linkgroup {
   list-style: none;
@@ -574,21 +574,30 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #1c1c1c;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 4fr);
+  gap: 2px;
+  
   
   
 }
+.link a{
+  
+  padding: 0;
+  font-size: small;
+  
+}
 
-.home-section {
-  width: 100%;
+
+.home-section  .project-section .about-section .contact-section{
+  width: 90%;
   height: 100vh;
   display: inline-block;
   align-items: center;
   position: fixed;  
 }
 .heading {
-  margin-top: 200px;
-  display: inline-block;
+  margin-top: 100px;
+  
   color: #fff;
   margin-left: 20px;
   font-size: 25px;
@@ -601,7 +610,7 @@ body {
   justify-content: space-between;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   width: 55%;
   margin-top: 15px;
 }
@@ -611,4 +620,39 @@ body {
   padding: 10px;
   border-radius: 5%;
 }
+.home-img{
+  width:50%;
+  height: 90vh;
+  object-fit:cover;
+  
 }
+
+.project-heading{
+   
+  display: none;
+}
+
+.project-container{
+  display: flex;
+  flex-wrap: wrap;
+ 
+
+ 
+}
+
+.project-content{
+ width:80% ;
+ height: 20%;
+}
+.project-img{
+  width: 80%;
+  height: 20%;
+  float: left;
+}
+.project-title .project-info{
+  font-size: small;
+word-break: break-all;
+}
+
+}
+
