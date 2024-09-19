@@ -1,35 +1,39 @@
+/* Base styles for the navigation links */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+ 
+}
 
+/* Pseudo-element to create the fluid underline effect */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #007bff;
+  bottom: 5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+  
+}
+
+/* Apply the underline animation when the link is active */
+.nav-link.active-link::after {
+  width: 100%;
+}
+
+/* Optional: Add hover effect for non-active links */
+.nav-link:hover::after {
+  width: 100%;
+  background-color: #007bff;
+  border: #060606 1px solid;
+}
 
 .breadcrumb {
   background-color: transparent;
   padding: 0;
   margin-bottom: 0;
 }
-/* Underline for active link */
-.nav-link.active-link {
-  position: relative;
-}
-
-.nav-link.active-link::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 5px;
-  left: 0;
-  background-color: #007bff; /* Bootstrap primary color */
-  transform: scaleX(1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-link:not(.active-link)::after {
-  transform: scaleX(0);
-}
-
-/* Adding hover underline effect */
-.nav-link:hover::after {
-  transform: scaleX(1);
-}
-
-
 

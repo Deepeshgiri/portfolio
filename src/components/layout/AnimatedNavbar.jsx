@@ -5,6 +5,7 @@ import passPic from '../../images/pass_pic.jpg'; // Import the image
 import './layout.css';
 
 
+
 function AnimatedNavbar() {
   const location = useLocation();
 
@@ -24,14 +25,18 @@ function AnimatedNavbar() {
           </Navbar.Brand>
 
           {/* Hamburger Toggle for mobile */}
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          
+          
+  <Navbar.Toggle aria-controls="basic-navbar-nav" className="small-toggle" />
+
+
 
           {/* Collapsible Section for Links */}
           <Navbar.Collapse id="basic-navbar-nav text-center">
-            <Nav className="ms-auto d-flex align-items-center">
+            <Nav className="ms-auto d-flex align-items-end">
               <NavLink
                 to="/"
-                className={({ isActive }) => `nav-link me-3 d-flex align-items-center ${isActive ? 'active-link' : ''}`}
+                className={({ isActive }) => `nav-link me-3 d-flex align-items-center    ${isActive ? 'active-link ' : ''} ` }
               >
                 <i className="bi bi-house me-2"></i> {/* Home icon */}
                 Home
