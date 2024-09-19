@@ -1,0 +1,35 @@
+
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+/* Underline for active link */
+.nav-link.active-link {
+  position: relative;
+}
+
+.nav-link.active-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 5px;
+  left: 0;
+  background-color: #007bff; /* Bootstrap primary color */
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:not(.active-link)::after {
+  transform: scaleX(0);
+}
+
+/* Adding hover underline effect */
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+
+

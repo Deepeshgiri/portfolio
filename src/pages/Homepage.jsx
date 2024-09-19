@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'animate.css'
 
-import git from '../images/github.png'
+
 import passPic from '../images/pass_pic.jpg'
 import facebook from '../images/facebook.png'
 import linkedin from '../images/linkedin.png'
@@ -14,11 +14,17 @@ const Homepage = () => {
         <div className="container-fluid bg-light">
             <header className="row animate__animated animate__fadeInDown">
                 <div className="col-12 text-center">
-                    <h1 className="mt-5 display-4 text-primary">Welcome to My Portfolio</h1>
+                    <h1 className="mt-4 display-5 text-primary">Welcome to My Portfolio</h1>
                 </div>
             </header>
 
-            <section className="row align-items-center my-5 py-5">
+    
+
+            <section className="row align-items-center my-1 py-1">
+            <div className="col-md-3 text-center">
+                    <img src={passPic} className="img-fluid rounded-circle shadow" alt="Deepesh" width="300" />
+                </div>
+                
                 <div className="col-md-6">
                     <h1 className="display-3 font-weight-bold text-dark">
                         Hello!! I am <br />
@@ -33,9 +39,7 @@ const Homepage = () => {
                         <a href="https://www.instagram.com/_deepesh_giri/"><img src={instagram} alt="Instagram" width="40" /></a>
                     </div>
                 </div>
-                <div className="col-md-6 text-center">
-                    <img src={passPic} className="img-fluid rounded-circle shadow" alt="Deepesh" width="300" />
-                </div>
+                
             </section>
 
             <section className="row animate__animated animate__fadeIn animate__delay-1s">

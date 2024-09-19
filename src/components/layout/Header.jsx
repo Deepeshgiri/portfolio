@@ -3,9 +3,9 @@ import AnimatedNavbar from "./AnimatedNavbar"
 const Header =()=>{
 
     return(
-        <>
-        <AnimatedNavbar/>
-        </>
+        <div className="p-1">
+        <AnimatedNavbar  />
+        </div>
     )
 }
 
