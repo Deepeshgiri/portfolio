@@ -1,6 +1,9 @@
-.small-toggle {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
-  
+
+.App {
+ 
+ 
+    align-items: center;
+    justify-content: center;
+    font-size: calc(5px + 2vmin);
+    color: rgb(151, 141, 141);
+}

@@ -13,7 +13,8 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/portfolio">
+   <div className='App'>
+     <Router basename="/portfolio" >
     <Header />
     <Routes>
       <Route path="/" element={<Homepage />} />
@@ -24,6 +25,7 @@ function App() {
     </Routes>
     <Footer />
   </Router>
+   </div>
   
   );
 }

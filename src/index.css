@@ -1,24 +1,6 @@
-.sparkle {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
+.small-toggle {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
-.sparkle::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 90%;
-  width: 50%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(241, 1, 1, 0.8), rgba(255,255,255,0) 70%);
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.5);
-  pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.sparkle:hover::before {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.2);
-}
