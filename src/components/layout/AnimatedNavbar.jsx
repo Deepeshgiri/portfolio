@@ -1,13 +1,16 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Navbar, Nav, Container, Breadcrumb } from 'react-bootstrap';
-import passPic from '../../images/pass_pic.jpg'; // Import the image
+import passPic from '../../images/pass_pic.jpg';
+import ThemeToggle from '../ThemeToggle';
+import { useTheme } from '../../contexts/ThemeContext';
 import './layout.css';
 
 
 
 function AnimatedNavbar() {
   const location = useLocation();
+  const { isDark } = useTheme();
 
 
 
@@ -16,7 +19,15 @@ function AnimatedNavbar() {
 
   return (
     <>
-      <Navbar expand="lg" bg="light" variant="light" className="animate__animated animate__fadeIn d-flex justify-content-center">
+      <Navbar 
+        expand="lg" 
+        className="animate__animated animate__fadeIn d-flex justify-content-center"
+        style={{
+          backgroundColor: 'var(--navbar-bg)',
+          backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid var(--border-color)'
+        }}
+      >
         <Container fluid>
           {/* Logo Section */}
           <Navbar.Brand as={NavLink} to="/" className="p-0 m-0 d-flex align-items-center">
@@ -34,6 +45,7 @@ function AnimatedNavbar() {
           {/* Collapsible Section for Links */}
           <Navbar.Collapse id="basic-navbar-nav text-center">
             <Nav className="ms-auto d-flex align-items-end">
+              <ThemeToggle />
               <NavLink
                 to="/"
                 className={({ isActive }) => `nav-link me-3 d-flex align-items-center    ${isActive ? 'active-link ' : ''} ` }

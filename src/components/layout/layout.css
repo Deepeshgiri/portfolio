@@ -2,8 +2,8 @@
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: inherit;
- 
+  color: var(--text-primary) !important;
+  transition: color 0.3s ease;
 }
 
 /* Pseudo-element to create the fluid underline effect */
@@ -16,7 +16,6 @@
   bottom: 5px;
   left: 0;
   transition: width 0.3s ease-in-out;
-  
 }
 
 /* Apply the underline animation when the link is active */
@@ -28,12 +27,20 @@
 .nav-link:hover::after {
   width: 100%;
   background-color: #007bff;
-  border: #060606 1px solid;
 }
 
 .breadcrumb {
   background-color: transparent;
   padding: 0;
   margin-bottom: 0;
+}
+
+.breadcrumb-item a {
+  color: var(--text-secondary) !important;
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: var(--text-primary) !important;
 }
 

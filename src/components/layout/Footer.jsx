@@ -12,10 +12,10 @@ const Footer =()=>{
 
     return(
 
-        <div className="container-fluid bg-dark text-white text-center ">
-             <footer className="row mt-1 py-4 bg-dark text-white animate__animated animate__fadeInUp animate__delay-3s">
+        <div className="container-fluid text-center" style={{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', borderTop: '1px solid var(--border-color)' }}>
+             <footer className="row mt-1 py-4 animate__animated animate__fadeInUp animate__delay-3s">
                 <div className="col-12 text-center">
-                    <p className="mb-0">© {year} Deepesh Giri. All rights reserved.</p>
+                    <p className="mb-0" style={{ color: 'var(--text-secondary)' }}>© {year} Deepesh Giri. All rights reserved.</p>
                 </div>
             </footer>
         </div>
