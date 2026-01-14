@@ -1,12 +1,7 @@
 import AnimatedNavbar from "./AnimatedNavbar"
 
-const Header =()=>{
-
-    return(
-        <div className="p-1">
-        <AnimatedNavbar  />
-        </div>
-    )
+const Header = () => {
+  return <AnimatedNavbar />
 }
 
 export default Header;

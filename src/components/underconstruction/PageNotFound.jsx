@@ -1,43 +1,35 @@
-
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'animate.css/animate.min.css';
 
 const PageNotFound = () => {
   return (
-    <Container fluid className="min-vh-100 d-flex align-items-center bg-light">
-      <Row className="w-100">
-        <Col md={8} className="mx-auto text-center">
-          <h1 className="display-1 fw-bold text-danger animate__animated animate__bounceIn">404</h1>
-          <h2 className="mb-4 animate__animated animate__fadeIn animate__delay-1s">Oops! Page Not Found</h2>
-          <p className="lead mb-5 animate__animated animate__fadeIn animate__delay-2s">
-            We're sorry, but it seems the page you're looking for has vanished into the digital abyss. 
-            Our team of expert navigators is currently charting a course to bring it back.
-          </p>
-          <div className="animate__animated animate__fadeIn animate__delay-3s">
-            <p className="text-muted mb-4">
-              In the meantime, why not explore our other pages? They're feeling a bit lonely and would love your company.
-            </p>
-            <Button as={Link} to="/" variant="primary" size="lg" className="me-3 shadow-sm">
-              Take Me Home
-            </Button>
-            <Button variant="outline-secondary" size="lg" className="shadow-sm" onClick={() => window.history.back()}>
-              Go Back
-            </Button>
-          </div>
-        </Col>
-      </Row>
-      <footer className="position-absolute bottom-0 start-50 translate-middle-x mb-4 text-center animate__animated animate__fadeIn animate__delay-4s">
-        <p className="text-muted">
-          <small>
-            If you believe this page should exist, please contact our support team. 
-            We appreciate your feedback as it helps us improve our digital cartography skills.
-          </small>
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="text-center max-w-2xl">
+        <h1 className="text-9xl font-display font-bold text-red-500 mb-4">404</h1>
+        <h2 className="text-4xl font-display font-bold mb-6">Oops! Page Not Found</h2>
+        <p className="text-xl text-dark-400 mb-8">
+          We're sorry, but it seems the page you're looking for has vanished into the digital abyss. 
+          Our team of expert navigators is currently charting a course to bring it back.
         </p>
-      </footer>
-    </Container>
+        <div className="mb-8">
+          <p className="text-dark-500 mb-6">
+            In the meantime, why not explore our other pages? They're feeling a bit lonely and would love your company.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <Link to="/" className="btn-primary">
+              Take Me Home
+            </Link>
+            <button onClick={() => window.history.back()} className="btn-secondary">
+              Go Back
+            </button>
+          </div>
+        </div>
+        <footer className="text-dark-500 text-sm">
+          If you believe this page should exist, please contact our support team. 
+          We appreciate your feedback as it helps us improve our digital cartography skills.
+        </footer>
+      </div>
+    </div>
   );
 };
 
